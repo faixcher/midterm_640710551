@@ -40,7 +40,7 @@ class _CalculatorState extends State<Calculator> {
               padding: EdgeInsets.all(16.0),
               child: Text(
                 _text,
-                style: TextStyle(fontSize: 24.0),
+                style: TextStyle(fontSize: 80.0),
               ),
             ),
           ),
@@ -100,12 +100,9 @@ class _CalculatorState extends State<Calculator> {
             action(label);
           });
         },
-        
         child: Container(
-          
           margin: EdgeInsets.all(3),
           height: 120.0,
-          
           color: color,
           alignment: Alignment.center,
           child: Text(
@@ -132,19 +129,18 @@ class _CalculatorState extends State<Calculator> {
       _text = '0';
       _buffer = '';
     } else if (label == '÷') {
-      
       if (_buffer_OP != '÷') {
         _buffer_OP = '÷';
         _buffer += label;
         _text = _buffer;
       }
-    } else if (label == '+' ) {
+    } else if (label == '+') {
       if (_buffer_OP != '+') {
         _buffer_OP = '+';
         _buffer += label;
         _text = _buffer;
       }
-    } else if (label == '-' ) {
+    } else if (label == '-') {
       if (_buffer_OP != '-') {
         _buffer_OP = '-';
         _buffer += label;
